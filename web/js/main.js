@@ -5,6 +5,25 @@
 	$('.catalog').dcAccordion({
 		speed: 300
 	});
+
+	$('.add-to-cart').on('click', function(e){
+		e.preventDefault();
+		var id = $(this).data('id');
+		$.ajax({
+			url: '/cart/add',
+			data: {id: id},
+			type: 'GET',
+			success: function(res){
+                if(!res) alert('Empty ');
+				console.log(res);
+                //showCart(res);
+			},
+			error: function(){
+				alert('AJAX Error!');
+			}
+		});
+	});
+
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
 	};	

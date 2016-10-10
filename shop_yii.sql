@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `yii2_loc`
+-- База данных: `shop_yii`
 --
-CREATE DATABASE IF NOT EXISTS `shop-yii` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `shop-yii`;
+--CREATE DATABASE IF NOT EXISTS `shop-yii` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+--USE `shop-yii`;
 
 -- --------------------------------------------------------
 

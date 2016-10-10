@@ -38,7 +38,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,0,'Sportswear',NULL,NULL),(2,0,'Mens',NULL,NULL),(3,0,'Womens',NULL,NULL),(4,1,'Nike',NULL,NULL),(5,1,'Under Armour',NULL,NULL),(6,1,'Adidas',NULL,NULL),(7,1,'Puma',NULL,NULL),(8,1,'ASICS',NULL,NULL),(9,2,'Fendi',NULL,NULL),(10,2,'Guess',NULL,NULL),(11,2,'Valentino',NULL,NULL),(12,2,'Dior',NULL,NULL),(13,2,'Versace',NULL,NULL),(14,2,'Armani',NULL,NULL),(15,2,'Prada',NULL,NULL),(16,2,'Dolce and Gabbana',NULL,NULL),(17,2,'Chanel',NULL,NULL),(18,2,'Gucci',NULL,NULL),(19,3,'Fendi',NULL,NULL),(20,3,'Guess',NULL,NULL),(21,3,'Valentino',NULL,NULL),(22,3,'Dior',NULL,NULL),(23,3,'Versace',NULL,NULL),(24,0,'Kids',NULL,NULL),(25,0,'Fashion',NULL,NULL),(26,0,'Households',NULL,NULL),(27,0,'Interiors',NULL,NULL),(28,0,'Clothing',NULL,NULL),(29,0,'Bags','сумки ключевики...','сумки описание...'),(30,0,'Shoes',NULL,NULL);
+INSERT INTO `category` VALUES (1,0,'Sportswear',NULL,NULL),(2,0,'Mens',NULL,NULL),(3,0,'Womens',NULL,NULL),(4,1,'Nike',NULL,NULL),(5,1,'Under Armour',NULL,NULL),(6,1,'Adidas',NULL,NULL),(7,1,'Puma',NULL,NULL),(8,1,'ASICS','кроссовки','кроссовки айсикс'),(9,2,'Fendi',NULL,NULL),(10,2,'Guess',NULL,NULL),(11,2,'Valentino',NULL,NULL),(12,2,'Dior',NULL,NULL),(13,2,'Versace',NULL,NULL),(14,2,'Armani',NULL,NULL),(15,2,'Prada',NULL,NULL),(16,2,'Dolce and Gabbana',NULL,NULL),(17,2,'Chanel',NULL,NULL),(18,2,'Gucci',NULL,NULL),(19,3,'Fendi',NULL,NULL),(20,3,'Guess',NULL,NULL),(21,3,'Valentino',NULL,NULL),(22,3,'Dior',NULL,NULL),(23,3,'Versace',NULL,NULL),(24,0,'Kids',NULL,NULL),(25,0,'Fashion',NULL,NULL),(26,0,'Households',NULL,NULL),(27,0,'Interiors',NULL,NULL),(28,0,'Clothing',NULL,NULL),(29,0,'Bags','сумки ключевики...','сумки описание...'),(30,0,'Shoes',NULL,NULL);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `order` (
   `phone` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,'2016-10-10 16:12:18','2016-10-10 16:12:18',2,76,'0','Борис','boangri@mail.ru','123','Летниковская 11/10'),(2,'2016-10-10 16:15:28','2016-10-10 16:15:28',1,56,'0','Борис','boangri@mail.ru','123','Летниковская 11/10');
+INSERT INTO `order` VALUES (2,'2016-10-09 19:37:55','2016-10-09 19:37:55',4,116,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(3,'2016-10-09 19:45:38','2016-10-09 19:45:38',9,466,'0','Борис','asadasd@dd.ru','123','Летниковская 11/10'),(4,'2016-10-09 20:39:50','2016-10-09 20:39:50',3,146,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(5,'2016-10-09 20:44:24','2016-10-09 20:44:24',4,188,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(6,'2016-10-09 20:48:14','2016-10-09 20:48:14',1,56,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(7,'2016-10-09 20:52:21','2016-10-09 20:52:21',1,100,'0','Борис','asadasd@dd.ru','123','Летниковская 11/10'),(8,'2016-10-09 20:59:25','2016-10-09 20:59:25',2,90,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(9,'2016-10-09 21:07:43','2016-10-09 21:07:43',3,146,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(10,'2016-10-09 21:11:23','2016-10-09 21:11:23',3,146,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(11,'2016-10-09 21:18:26','2016-10-09 21:18:26',6,446,'0','Борис','xinu@ya.ru','123','Летниковская 11/10'),(12,'2016-10-09 21:26:17','2016-10-09 21:26:17',2,76,'0','Борис','boangri@mail.ru','1234','Летниковская 11/10'),(13,'2016-10-09 21:30:08','2016-10-09 21:30:08',6,346,'0','Борис','boangri@mail.ru','123','Летниковская 11/10'),(14,'2016-10-09 21:33:58','2016-10-09 21:33:58',3,146,'0','Борис','boangri@mail.ru','123','Летниковская 11/10');
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +90,7 @@ CREATE TABLE `order_items` (
   `qty_item` int(11) NOT NULL,
   `sum_item` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `order_items` (
 
 LOCK TABLES `order_items` WRITE;
 /*!40000 ALTER TABLE `order_items` DISABLE KEYS */;
-INSERT INTO `order_items` VALUES (1,1,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(2,1,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(3,2,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56);
+INSERT INTO `order_items` VALUES (1,2,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(2,2,3,'Блуза Mango 53005681-05 M Бежевая',20,3,60),(3,3,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(4,3,3,'Блуза Mango 53005681-05 M Бежевая',20,3,60),(5,3,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,5,350),(6,4,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(7,4,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(8,4,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,1,70),(9,5,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,3,168),(10,5,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(11,6,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(12,7,6,'Кардиган Levi\'s Icy Grey Heather M',100,1,100),(13,8,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(14,8,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,1,70),(15,9,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(16,9,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(17,9,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,1,70),(18,10,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(19,10,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(20,10,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,1,70),(21,11,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(22,11,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(23,11,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,1,70),(24,11,6,'Кардиган Levi\'s Icy Grey Heather M',100,3,300),(25,12,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(26,12,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(27,13,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(28,13,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(29,13,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,1,70),(30,13,5,'Блузка Kira Plastinina 17-16-17453-SM-29 S',0,1,0),(31,13,6,'Кардиган Levi\'s Icy Grey Heather M',100,2,200),(32,14,2,'Джинсы MR520 MR 227 20002 0115 29-34 р Синие',56,1,56),(33,14,3,'Блуза Mango 53005681-05 M Бежевая',20,1,20),(34,14,4,'Блуза Tom Tailor TT 20312490071 7610 M Зелёная',70,1,70);
 /*!40000 ALTER TABLE `order_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +149,7 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `auth_key` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,6 +158,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'admin','$2y$13$wOps2udguwR.AaSq5STZdOkJ96X/GsSZmQ18Rp6wmnDzbyogWGmS6','giXTcV1tSzNpWLwtito-Jmja9daHkaH7');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -170,4 +171,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-10 17:03:26
+-- Dump completed on 2016-10-10 22:29:40

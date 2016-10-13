@@ -39,24 +39,26 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'hit',
                 'value' => function($data){
-                    return $data->hit ? 'Да' : 'Нет';
+                    return $data->hit ? '<span class="text-success">Да</span>': '<span class="text-danger">Нет</span>';
                 },
+                'format' => 'html',
             ],
             // 'new',
             [
                 'attribute' => 'new',
                 'value' => function($data){
-                    return $data->new ? 'Да' : 'Нет';
+                    return $data->new ? '<span class="text-success">Да</span>': '<span class="text-danger">Нет</span>';
                 },
+                'format' => 'html',
             ],
              //'sale',
             [
                 'attribute' => 'sale',
                 'value' => function($data){
-                    return $data->sale ? 'Да' : 'Нет';
+                    return $data->sale ? '<span class="text-success">Да</span>': '<span class="text-danger">Нет</span>';
                 },
+                'format' => 'html',
             ],
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

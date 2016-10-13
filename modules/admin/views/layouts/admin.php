@@ -152,7 +152,16 @@ ltAppAsset::register($this);
             </div>
         </div><!--/header-bottom-->
     </header><!--/header-->
-
+    
+    <?php if(Yii::$app->session->hasFlash('success')): ?>
+        <div class="alert alert-success alert-dismissble" role="alert">
+            <button type="button" class="close" data-dismiss="alert" area-label="Close">
+                <span area-hidden="true">&times;</span>
+            </button>
+            <?php echo Yii::$app->session->getFlash('success'); ?>
+        </div>
+    <?php endif; ?>
+    
     <div class="container">
         <?= $content ?>
     </div>
